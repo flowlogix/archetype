@@ -1,0 +1,44 @@
+= FlowLogix Starter Archetype
+
+This project is a Maven Archetype designed to create complete, testable projects for Jakarta EE. It provides a quick and easy way to set up a new project with a pre-configured structure and dependencies, following best practices.
+
+== What is an Archetype?
+
+A Maven Archetype is a project templating toolkit. It allows users to create new Maven projects from a predefined template. This "FlowLogix Starter Archetype" serves as that template.
+
+== How to use this Archetype
+
+To generate a new project using this archetype, run the following Maven command:
+
+[source,shell]
+----
+mvn archetype:generate \
+  -DarchetypeGroupId=com.flowlogix.archetypes \
+  -DarchetypeArtifactId=starter \
+  -DarchetypeVersion=LATEST \
+  -DgroupId=com.example \
+  -DartifactId=my-new-project \
+  -Dversion=x-SNAPSHOT
+----
+
+Replace `com.example`, `my-new-project`, and `1.0.0-SNAPSHOT` with your desired `groupId`, `artifactId`, and `version` for the new project.
+
+Upon successful generation, a new directory named `my-new-project` (or whatever `artifactId` you specified) will be created, containing your new project.
+
+== Project Structure
+
+The generated project will include:
+*   A pre-configured Maven `pom.xml`
+*   Basic Jakarta EE structure
+*   Example unit and integration tests
+*   Pre-configured CI/CD with Dependabot and GitHub Actions
+
+== Contributing
+
+Contributions are welcome! Please see the existing code for style and conventions.
+
+== Links
+
+*   FlowLogix Quick Start: https://start.flowlogix.com
+*   FlowLogix GitHub: https://github.com/flowlogix
+*   FlowLogix Dependency Chains: https://github.com/flowlogix/depchain
