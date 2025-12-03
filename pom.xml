@@ -28,6 +28,7 @@
         <checkstyle.suppressionsLocation>${maven.multiModuleProjectDirectory}/src/checkstyle/suppressions.xml</checkstyle.suppressionsLocation>
         <archetype.plugin.version>3.4.1</archetype.plugin.version>
         <base.pom.version>91</base.pom.version>
+        <depchain.version>102</depchain.version>
         <flowlogix.version>11</flowlogix.version>
         <arquillian.graphene.version>3.0.0-20250814</arquillian.graphene.version>
         <selenium.version>4.38.0</selenium.version>
@@ -95,6 +96,11 @@
                 <artifactId>infra-pom</artifactId>
                 <version>${base.pom.version}</version>
                 <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>com.flowlogix.depchain</groupId>
+                <artifactId>unit-test</artifactId>
+                <version>${depchain.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.flowlogix</groupId>

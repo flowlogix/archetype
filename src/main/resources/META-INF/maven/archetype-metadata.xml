@@ -15,14 +15,11 @@
         <requiredProperty key="projectName">
             <defaultValue>Sample Project</defaultValue>
         </requiredProperty>
-        <requiredProperty key="projectVersion">
-            <defaultValue>${project.version}</defaultValue>
-        </requiredProperty>
         <requiredProperty key="basePomVersion">
             <defaultValue>${base.pom.version}</defaultValue>
         </requiredProperty>
-        <requiredProperty key="slf4jVersion">
-            <defaultValue>${slf4j.version}</defaultValue>
+        <requiredProperty key="depchainVersion">
+            <defaultValue>${depchain.version}</defaultValue>
         </requiredProperty>
         <requiredProperty key="flowlogixVersion">
             <defaultValue>${flowlogix.version}</defaultValue>
