@@ -35,10 +35,15 @@ javaDirectories.each { it.eachFileRecurse {
     }
 }
 
+
+if (request.properties['packagingType'] != "war") {
+    new File(request.getOutputDirectory(), request.getArtifactId() + "/src/main/webapp").deleteDir()
+}
+
 if (!request.properties['useShiro'].toBoolean()) {
     new File(request.getOutputDirectory(), request.getArtifactId() + "/src/main/webapp/WEB-INF/shiro.ini").delete()
 }
 
-if (request.properties['packagingType'] != "war") {
-    new File(request.getOutputDirectory(), request.getArtifactId() + "/src/main/webapp").deleteDir()
+if (!request.properties['arqGrapheneVersion'].toBoolean()) {
+    new File(request.getOutputDirectory(), request.getArtifactId() + "/.mvn/maven.config").delete()
 }
