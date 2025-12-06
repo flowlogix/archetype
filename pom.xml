@@ -30,7 +30,7 @@
         <base.pom.version>93</base.pom.version>
         <depchain.version>102</depchain.version>
         <flowlogix.version>11</flowlogix.version>
-        <arquillian.graphene.version>3.0.0-20250814</arquillian.graphene.version>
+        <arquillian.graphene.version>3.0.0-alpha.4</arquillian.graphene.version>
         <selenium.version>4.38.0</selenium.version>
         <arquillian.payara.version>3.1</arquillian.payara.version>
         <eclipselink.version>5.0.0-B11</eclipselink.version>
