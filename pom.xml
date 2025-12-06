@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.flowlogix</groupId>
@@ -12,7 +10,7 @@
     <groupId>com.flowlogix.archetypes</groupId>
     <artifactId>starter</artifactId>
     <packaging>maven-archetype</packaging>
-    <version>x-SNAPSHOT</version>
+    <version>107</version>
 
     <name>Starter project Archetype</name>
     <description>Create Complete, testable projects for Jakarta EE</description>
@@ -22,7 +20,8 @@
         <url>https://github.com/flowlogix/archetype/tree/main</url>
         <connection>scm:git:git://github.com/flowlogix/archetype.git</connection>
         <developerConnection>scm:git:git@github.com:flowlogix/archetype.git</developerConnection>
-    </scm>
+      <tag>Version-107</tag>
+  </scm>
 
     <properties>
         <checkstyle.suppressionsLocation>${maven.multiModuleProjectDirectory}/src/checkstyle/suppressions.xml</checkstyle.suppressionsLocation>
