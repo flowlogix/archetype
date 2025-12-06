@@ -44,6 +44,6 @@ if (!request.properties['useShiro'].toBoolean()) {
     new File(request.getOutputDirectory(), request.getArtifactId() + "/src/main/webapp/WEB-INF/shiro.ini").delete()
 }
 
-if (!request.properties['arqGrapheneVersion'].toBoolean()) {
+if (!request.properties['useArquillianGraphene'].toBoolean()) {
     new File(request.getOutputDirectory(), request.getArtifactId() + "/.mvn/maven.config").delete()
 }
