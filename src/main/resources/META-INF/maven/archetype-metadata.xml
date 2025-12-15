@@ -27,15 +27,6 @@
         <requiredProperty key="arqGrapheneVersion">
             <defaultValue>${arquillian.graphene.version}</defaultValue>
         </requiredProperty>
-        <requiredProperty key="seleniumVersion">
-            <defaultValue>${selenium.version}</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="arqPayaraVersion">
-            <defaultValue>${arquillian.payara.version}</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="eclipselinkVersion">
-            <defaultValue>${eclipselink.version}</defaultValue>
-        </requiredProperty>
         <requiredProperty key="cacheExtensionVersion">
             <defaultValue>${maven.cache.extension.version}</defaultValue>
         </requiredProperty>
