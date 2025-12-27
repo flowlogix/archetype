@@ -114,7 +114,7 @@
             </includes>
         </fileSet>
         <fileSet filtered="true" packaged="false">
-            <directory>.idea</directory>
+            <directory>dot-idea</directory>
             <includes>
                 <include>*</include>
             </includes>
@@ -128,7 +128,7 @@
                 <exclude>pom.xml</exclude>
                 <exclude>src</exclude>
                 <exclude>.mvn</exclude>
-                <exclude>.idea</exclude>
+                <exclude>dot-idea</exclude>
             </excludes>
         </fileSet>
         <fileSet>

@@ -4,6 +4,9 @@ mavenExecutable.setExecutable(true, false)
 mavenExecutable = new File(request.getOutputDirectory(), request.getArtifactId() + "/mvnw.cmd")
 mavenExecutable.setExecutable(true, false)
 
+new File(request.getOutputDirectory(), request.getArtifactId() + '/dot-idea')
+        .renameTo(new File(request.getOutputDirectory(), request.getArtifactId() + '/.idea'))
+
 // prepend apache-header.txt to all Java files
 def headerText = new File(request.getOutputDirectory(), request.getArtifactId() + "/src/checkstyle/apache-header.txt").text
 def javaDirectories = []
