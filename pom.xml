@@ -28,7 +28,7 @@
         <checkstyle.suppressionsLocation>${maven.multiModuleProjectDirectory}/src/checkstyle/suppressions.xml</checkstyle.suppressionsLocation>
         <archetype.plugin.version>3.4.1</archetype.plugin.version>
         <base.pom.version>101</base.pom.version>
-        <depchain.version>105</depchain.version>
+        <depchain.version>106</depchain.version>
         <flowlogix.version>11</flowlogix.version>
         <arquillian.graphene.version>3.0.0-alpha.4</arquillian.graphene.version>
         <maven.executable.version>4.0.0-rc-5</maven.executable.version>
