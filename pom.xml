@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.flowlogix</groupId>
         <artifactId>infra-pom</artifactId>
-        <version>101</version>
+        <version>102</version>
     </parent>
 
     <groupId>com.flowlogix.archetypes</groupId>
@@ -27,7 +27,7 @@
     <properties>
         <checkstyle.suppressionsLocation>${maven.multiModuleProjectDirectory}/src/checkstyle/suppressions.xml</checkstyle.suppressionsLocation>
         <archetype.plugin.version>3.4.1</archetype.plugin.version>
-        <base.pom.version>101</base.pom.version>
+        <base.pom.version>102</base.pom.version>
         <depchain.version>106</depchain.version>
         <flowlogix.version>11</flowlogix.version>
         <arquillian.graphene.version>3.0.0-alpha.4</arquillian.graphene.version>
