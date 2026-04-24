@@ -30,7 +30,7 @@
         <base.pom.version>120</base.pom.version>
         <depchain.version>116</depchain.version>
         <flowlogix.version>11.3</flowlogix.version>
-        <arquillian.graphene.version>3.0.0.Final</arquillian.graphene.version>
+        <arquillian.graphene.version>3.0.1.Final</arquillian.graphene.version>
         <maven.executable.version>4.0.0-rc-5</maven.executable.version>
         <maven.wrapper.version>3.3.4</maven.wrapper.version>
         <maven.cache.extension.version>1.2.2</maven.cache.extension.version>
