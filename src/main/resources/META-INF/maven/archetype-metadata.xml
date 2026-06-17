@@ -4,7 +4,7 @@
         name="starter">
     <requiredProperties>
         <requiredProperty key="baseType">
-            <validationRegex>base|infra|payara</validationRegex>
+            <validationRegex>base|infra|payara|glassfish</validationRegex>
         </requiredProperty>
         <requiredProperty key="version">
             <defaultValue>1.x-SNAPSHOT</defaultValue>
