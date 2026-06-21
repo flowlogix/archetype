@@ -22,6 +22,9 @@
         <!-- <maven.compiler.release>25</maven.compiler.release> -->
         <flowlogix.depchain.version>${depchainVersion}</flowlogix.depchain.version>
         <flowlogix.version>${flowlogixVersion}</flowlogix.version>
+#if (${useShiro} == true)
+        <shiro.version>${shiroVersion}</shiro.version>
+#end
 #if (${useArquillianGraphene} == true)
         <arquillian.graphene.version>${arqGrapheneVersion}</arquillian.graphene.version>
 #end
@@ -86,9 +89,14 @@
         </dependency>
 #if (${useShiro} == true)
         <dependency>
-            <groupId>com.flowlogix.depchain</groupId>
-            <artifactId>shiro-jakarta</artifactId>
-            <version>${flowlogix.depchain.version}</version>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-jakarta-ee</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-configuration2</artifactId>
+            <scope>runtime</scope>
         </dependency>
 #end
 #if (${useOmniFaces} == true)

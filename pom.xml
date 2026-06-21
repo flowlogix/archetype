@@ -30,6 +30,7 @@
         <base.pom.version>128</base.pom.version>
         <depchain.version>125</depchain.version>
         <flowlogix.version>11.4.1</flowlogix.version>
+        <shiro.version>3.0.0</shiro.version>
         <arquillian.graphene.version>3.0.1.Final</arquillian.graphene.version>
         <maven.executable.version>4.0.0-rc-5</maven.executable.version>
         <maven.wrapper.version>3.3.4</maven.wrapper.version>
@@ -109,6 +110,11 @@
                 <groupId>com.flowlogix</groupId>
                 <artifactId>flowlogix-jee</artifactId>
                 <version>${flowlogix.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-core</artifactId>
+                <version>${shiro.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jboss.arquillian.graphene</groupId>

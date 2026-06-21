@@ -24,6 +24,9 @@
         <requiredProperty key="flowlogixVersion">
             <defaultValue>${flowlogix.version}</defaultValue>
         </requiredProperty>
+        <requiredProperty key="shiroVersion">
+            <defaultValue>${shiro.version}</defaultValue>
+        </requiredProperty>
         <requiredProperty key="arqGrapheneVersion">
             <defaultValue>${arquillian.graphene.version}</defaultValue>
         </requiredProperty>
