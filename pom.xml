@@ -32,7 +32,7 @@
         <flowlogix.version>11.4.1</flowlogix.version>
         <shiro.version>3.0.0</shiro.version>
         <arquillian.graphene.version>3.0.1.Final</arquillian.graphene.version>
-        <maven.executable.version>4.0.0-rc-5</maven.executable.version>
+        <maven.executable.version>4.0.0-rc-6</maven.executable.version>
         <maven.wrapper.version>3.3.4</maven.wrapper.version>
         <maven.cache.extension.version>1.2.3</maven.cache.extension.version>
     </properties>
