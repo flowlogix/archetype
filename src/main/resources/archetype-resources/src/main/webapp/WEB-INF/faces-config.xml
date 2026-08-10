@@ -24,11 +24,11 @@
         <el-resolver>
             org.primefaces.application.exceptionhandler.PrimeExceptionHandlerELResolver
         </el-resolver>
+#end
         <system-event-listener>
             <system-event-listener-class>com.flowlogix.ui.AjaxErrorHandlerListener</system-event-listener-class>
             <system-event-class>jakarta.faces.event.PreRenderViewEvent</system-event-class>
             <source-class>jakarta.faces.component.UIViewRoot</source-class>
         </system-event-listener>
-#end
     </application>
 </faces-config>
