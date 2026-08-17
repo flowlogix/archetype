@@ -34,7 +34,7 @@
         <arquillian.graphene.version>3.0.1.Final</arquillian.graphene.version>
         <maven.executable.version>4.0.0-rc-6</maven.executable.version>
         <maven.wrapper.version>3.3.4</maven.wrapper.version>
-        <maven.cache.extension.version>1.2.3</maven.cache.extension.version>
+        <maven.cache.extension.version>1.3.0</maven.cache.extension.version>
     </properties>
 
     <build>
