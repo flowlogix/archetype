@@ -25,6 +25,9 @@
 #if (${useShiro} == true)
         <shiro.version>${shiroVersion}</shiro.version>
 #end
+#if (${useAgenticAI} == true)
+        <jakarta.agentic-ai.version>${jakartaAgenticAIVersion}</jakarta.agentic-ai.version>
+#end
 #if (${useArquillianGraphene} == true)
         <arquillian.graphene.version>${arqGrapheneVersion}</arquillian.graphene.version>
 #end
@@ -47,6 +50,14 @@
             <version>${jakarta.ee.version}</version>
             <scope>provided</scope>
         </dependency>
+#if (${useAgenticAI} == true)
+        <dependency>
+            <groupId>jakarta.agentic-ai</groupId>
+            <artifactId>jakarta.agentic-ai-api</artifactId>
+            <version>${jakarta.agentic-ai.version}</version>
+            <scope>provided</scope>
+        </dependency>
+#end
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
