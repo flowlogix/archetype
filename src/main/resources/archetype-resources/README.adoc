@@ -4,7 +4,13 @@ This project has been automatically generated using the
 https://start.flowlogix.com[FlowLogix Quick Start] tool from the
 https://github.com/flowlogix/archetype[FlowLogix Starter] archetype.
 
-== Running the sample
+== Running in development mode with live reload
+[source,shell]
+----
+./mvnw package server:dev
+----
+
+== Running the tests
 [source,shell]
 ----
 ./mvnw verify
@@ -17,3 +23,5 @@ To regenerate the project, run the following command:
 mvn archetype:generate -DarchetypeGroupId=com.flowlogix.archetypes -DarchetypeArtifactId=starter \
 -DarchetypeVersion=LATEST
 ----
+
+link:https://flowlogix.com/contact[Contact FlowLogix]
