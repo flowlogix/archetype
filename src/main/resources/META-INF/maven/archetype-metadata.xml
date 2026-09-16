@@ -18,6 +18,9 @@
         <requiredProperty key="basePomVersion">
             <defaultValue>${base.pom.version}</defaultValue>
         </requiredProperty>
+        <requiredProperty key="flowlogixBomVersion">
+            <defaultValue>${flowlogix.bom.version}</defaultValue>
+        </requiredProperty>
         <requiredProperty key="depchainVersion">
             <defaultValue>${depchain.version}</defaultValue>
         </requiredProperty>
