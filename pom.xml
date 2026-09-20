@@ -28,7 +28,7 @@
         <checkstyle.suppressionsLocation>${maven.multiModuleProjectDirectory}/src/checkstyle/suppressions.xml</checkstyle.suppressionsLocation>
         <archetype.plugin.version>3.4.1</archetype.plugin.version>
         <base.pom.version>141</base.pom.version>
-        <flowlogix.bom.version>47</flowlogix.bom.version>
+        <flowlogix.bom.version>48</flowlogix.bom.version>
         <depchain.version>131</depchain.version>
         <flowlogix.version>11.6</flowlogix.version>
         <shiro.version>3.0.1</shiro.version>
