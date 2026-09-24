@@ -16,3 +16,14 @@ updates:
       maven-dependencies:
         patterns:
           - '*'
+
+  # Dependencies for GitHub Actions
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+    open-pull-requests-limit: 10
+    groups:
+      github-actions-dependencies:
+        patterns:
+          - '*'

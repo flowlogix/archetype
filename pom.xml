@@ -62,6 +62,14 @@
                     <exclude>META-INF/maven/archetype-metadata.xml</exclude>
                 </excludes>
             </resource>
+            <resource>
+                <directory>.github/workflows</directory>
+                <targetPath>archetype-resources/.github</targetPath>
+                <filtering>false</filtering>
+                <includes>
+                    <include>dependabot-automerge.yml</include>
+                </includes>
+            </resource>
         </resources>
         <plugins>
             <plugin>

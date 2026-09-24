@@ -32,7 +32,7 @@ javaDirectories.each { it.eachFileRecurse {
             javaFile.write(headerText + javaFileText)
 
             if (javaFile.getName().endsWith("IT.java")) {
-                javaFile.renameTo(integrationPackageFile.getPath() + "/" + javaFile.getName())
+                javaFile.renameTo(new File(integrationPackageFile, javaFile.getName()))
             }
         }
     }
@@ -50,3 +50,14 @@ if (!request.properties['useShiro'].toBoolean()) {
 if (!request.properties['useArquillianGraphene'].toBoolean()) {
     new File(request.getOutputDirectory(), request.getArtifactId() + "/.mvn/maven.config").delete()
 }
+
+// pin dependabot-automerge.yml to the same commit/version used by this archetype's own workflow
+def pinReferenceFile = new File(request.getOutputDirectory(), request.getArtifactId() + "/.github/dependabot-automerge.yml")
+def pinMatcher = pinReferenceFile.text =~ /dependabot-automerge\.yml@([0-9a-fA-F]{40})\s*#\s*(\S+)/
+pinMatcher.find()
+def generatedWorkflow = new File(request.getOutputDirectory(),
+        request.getArtifactId() + "/.github/workflows/dependabot-automerge.yml")
+generatedWorkflow.write(generatedWorkflow.text.replaceFirst(
+        /dependabot-automerge\.yml@main/,
+        "dependabot-automerge.yml@${pinMatcher.group(1)} # ${pinMatcher.group(2)}"))
+pinReferenceFile.delete()
