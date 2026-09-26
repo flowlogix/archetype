@@ -22,6 +22,8 @@ updates:
     directory: '/'
     schedule:
       interval: 'daily'
+    cooldown:
+      default-days: 0
     open-pull-requests-limit: 10
     groups:
       github-actions-dependencies:
