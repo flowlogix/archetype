@@ -7,6 +7,8 @@ mavenExecutable.setExecutable(true, false)
 def ideaDirectory = new File(request.getOutputDirectory(), request.getArtifactId() + '/dot-idea')
 if (ideaDirectory.listFiles()?.length > 0) {
     ideaDirectory.renameTo(new File(request.getOutputDirectory(), request.getArtifactId() + '/.idea'))
+} else {
+    ideaDirectory.deleteDir()
 }
 
 // prepend apache-header.txt to all Java files
