@@ -30,7 +30,7 @@
         <base.pom.version>147</base.pom.version>
         <flowlogix.bom.version>54</flowlogix.bom.version>
         <depchain.version>135</depchain.version>
-        <flowlogix.version>11.7.3</flowlogix.version>
+        <flowlogix.version>11.7.4</flowlogix.version>
         <shiro.version>3.0.1</shiro.version>
         <jakarta.agentic-ai.version>1.0.0-M1</jakarta.agentic-ai.version>
         <arquillian.graphene.version>3.0.1.Final</arquillian.graphene.version>
