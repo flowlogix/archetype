@@ -31,7 +31,7 @@
         <flowlogix.bom.version>56</flowlogix.bom.version>
         <depchain.version>135</depchain.version>
         <flowlogix.version>11.7.6</flowlogix.version>
-        <shiro.version>3.0.1</shiro.version>
+        <shiro.version>3.0.2</shiro.version>
         <jakarta.agentic-ai.version>1.0.0-M1</jakarta.agentic-ai.version>
         <arquillian.graphene.version>3.0.1.Final</arquillian.graphene.version>
         <maven.executable.version>4.0.0-rc-7</maven.executable.version>
