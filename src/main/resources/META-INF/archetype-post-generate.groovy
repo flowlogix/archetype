@@ -43,16 +43,32 @@ javaDirectories.each { it.eachFileRecurse {
 }
 
 
-if (request.properties['packagingType'] != "war") {
-    new File(request.getOutputDirectory(), request.getArtifactId() + "/src/main/webapp").deleteDir()
-}
+def projectDirectory = new File(request.getOutputDirectory(), request.getArtifactId())
 
 if (!request.properties['useShiro'].toBoolean()) {
-    new File(request.getOutputDirectory(), request.getArtifactId() + "/src/main/webapp/WEB-INF/shiro.ini").delete()
+    new File(projectDirectory, "src/main/webapp/WEB-INF/shiro.ini").delete()
 }
 
 if (!request.properties['useArquillianGraphene'].toBoolean()) {
-    new File(request.getOutputDirectory(), request.getArtifactId() + "/.mvn/maven.config").delete()
+    new File(projectDirectory, ".mvn/maven.config").delete()
+}
+
+if (request.properties['baseType'] == "quarkus") {
+    // Quarkus serves web content from the classpath instead of src/main/webapp
+    def webappDirectory = new File(projectDirectory, "src/main/webapp")
+    def metaInfDirectory = new File(projectDirectory, "src/main/resources/META-INF")
+    ["web.xml", "faces-config.xml"].each {
+        new File(webappDirectory, "WEB-INF/" + it).renameTo(new File(metaInfDirectory, it))
+    }
+    def resourcesDirectory = new File(metaInfDirectory, "resources")
+    resourcesDirectory.mkdirs()
+    webappDirectory.listFiles().each { it.renameTo(new File(resourcesDirectory, it.getName())) }
+    webappDirectory.deleteDir()
+
+    def readme = new File(projectDirectory, "README.adoc")
+    readme.write(readme.text.replace("./mvnw package server:dev", "./mvnw quarkus:dev"))
+} else if (request.properties['packagingType'] != "war") {
+    new File(projectDirectory, "src/main/webapp").deleteDir()
 }
 
 // pin dependabot-automerge.yml to the same commit/version used by this archetype's own workflow

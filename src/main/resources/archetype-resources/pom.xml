@@ -5,7 +5,9 @@
     <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
     <version>${version}</version>
-#if (${packagingType} != 'jar')
+#if (${baseType} == 'quarkus')
+    <packaging>quarkus</packaging>
+#elseif (${packagingType} != 'jar')
     <packaging>${packagingType}</packaging>
 #end
 
@@ -113,14 +115,24 @@
 #end
 #if (${useOmniFaces} == true)
         <dependency>
+#if (${baseType} == 'quarkus')
+            <groupId>io.quarkiverse.omnifaces</groupId>
+            <artifactId>quarkus-omnifaces</artifactId>
+#else
             <groupId>org.omnifaces</groupId>
             <artifactId>omnifaces</artifactId>
+#end
         </dependency>
 #end
 #if (${usePrimeFaces} == true)
         <dependency>
+#if (${baseType} == 'quarkus')
+            <groupId>io.quarkiverse.primefaces</groupId>
+            <artifactId>quarkus-primefaces</artifactId>
+#else
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
+#end
         </dependency>
 #end
     </dependencies>
@@ -129,7 +141,11 @@
         <dependencies>
             <dependency>
                 <groupId>com.flowlogix</groupId>
+#if (${baseType} == 'quarkus')
+                <artifactId>flowlogix-quarkus-bom</artifactId>
+#else
                 <artifactId>flowlogix-bom</artifactId>
+#end
                 <version>${flowlogix.bom.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
